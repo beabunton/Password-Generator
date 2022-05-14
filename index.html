@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div class="card">
+      <div class="card-header">
+        <h2>Generate a Password</h2>
+      </div>
+      <div class="card-body">
+        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+      </div>
+      <div class="card-footer">
+        <button id="generate" class="btn">Generate Password</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+
+<div id="overlay"></div>
+
+<div id="prompt-1" class="card">
+  <label for="length">Length</label>
+  <input class="length" placeholder="Min 8 and Max 128 characters" maxlength="128" size="40" />
+
+  <br><br>
+  <button class="next">Next</button>
+</div>
+
+<div id="prompt-2" class="card">
+
+  <input type="checkbox" id="lowercase" name="lowercase">
+  <label for="lowercase"> Lowercase</label>
+
+  <input type="checkbox" id="uppercase" name="uppercase">
+  <label for="uppercase"> Uppercase</label>
+
+  <input type="checkbox" id="numeric" name="numeric">
+  <label for="numeric"> Numeric</label>
+
+  <input type="checkbox" id="special" name="special">
+  <label for="special"> Special characters</label>
+
+  <br><br>
+  <button class="next">Generate</button>
+</div>
+
+</html>
